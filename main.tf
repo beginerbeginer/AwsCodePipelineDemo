@@ -8,20 +8,20 @@ terraform {
       version = "~> 3.0"
     }
   }
-  /*
+
   backend "s3" {
-    bucket         = "kyler-codebuild-demo-terraform-tfstate"
+    bucket         = "miyagaki-codebuild-demo-terraform-tfstate"
     key            = "terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-northeast-1"
     dynamodb_table = "codebuild-dynamodb-terraform-locking"
     encrypt        = true
   }
-*/
+
 }
 
 # Download any stable version in AWS provider of 2.36.0 or higher in 2.36 train
 provider "aws" {
-  profile = "ec2-user"
+  profile = "ec2_user"
   region  = "ap-northeast-1"
   /*
   assume_role {
